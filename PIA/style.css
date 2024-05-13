@@ -1,0 +1,12 @@
+
+.navbar {
+    background-color: #004cb8; 
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+    color: rgb(0, 0, 0); /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+
