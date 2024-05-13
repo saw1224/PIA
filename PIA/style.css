@@ -22,6 +22,12 @@
     width: 450px; /* Establece el ancho deseado para la imagen */
 }
 
+.carousel-item img {
+    height: 150px; /* Altura fija para las imágenes */
+    width: auto; /* Ancho ajustado automáticamente */
+    object-fit: cover; /* Cubrir el área visible con la imagen */
+}
+
 
 
 
