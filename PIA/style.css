@@ -1,12 +1,33 @@
 
 .navbar {
-    background-color: #0b1b31; 
+    background-color: #004cb8; 
 }
 
-.navbar-nav .nav-link,
-.navbar-brand {
-    color: rgb(0, 0, 0); /* Color del texto */
-    font-size: 18px; /* Tamaño del texto */
+.content {
+    padding-top: 50px; /* Ajusta la distancia entre la barra de navegación y el párrafo */
+    margin-left: 20px; /* Ajusta la distancia del párrafo desde el borde izquierdo */
+   
 }
+.paragraph-container {
+    width: 50%; /* Puedes ajustar este valor según el diseño de tu página */
+    float: left; /* Alinea el contenedor a la izquierda */
+}
+.image-container {
+    float: right; /* Alinea el contenedor de la imagen a la derecha */
+    margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
+    margin-right: 50px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.image-container img {
+    width: 450px; /* Establece el ancho deseado para la imagen */
+}
+
+
+
+
+
+
+
+
 
 
