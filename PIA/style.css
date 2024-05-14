@@ -26,10 +26,27 @@
     height: 150px; /* Altura fija para las imágenes */
     width: auto; /* Ancho ajustado automáticamente */
     object-fit: cover; /* Cubrir el área visible con la imagen */
+    margin: 10px auto; /* Añade margen alrededor de las imágenes */
+    border-radius: 10px;
+}
+.carousel-item{
+    padding: 20px;
 }
 
+.container {
+    background-color: #6a0dad;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    margin-top: 50px;
+}
 
-
+.container h2, .container label {
+    color: white;
+}
 
 
 
