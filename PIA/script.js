@@ -7,3 +7,16 @@ document.getElementById("agendar-cita-btn").addEventListener("click", function()
 var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
     interval: 2000 // Intervalo de cambio de diapositivas en milisegundos
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Encuentra el carrusel por su ID
+    var carruselSalas = document.getElementById("carruselSalas");
+
+    // Activa el carrusel
+    var carousel = new bootstrap.Carousel(carruselSalas, {
+        interval: 3000 // Cambia las diapositivas cada 3 segundos
+    });
+});
+
+

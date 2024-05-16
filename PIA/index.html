@@ -37,14 +37,28 @@
                     <img src="img/comunicar.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nuestrosdoctores.html">Nuestros Doctores
+                    <img src="img/equipo-medico.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="departamentos.html">Departamentos
+                    <img src="img/cama-de-hospital.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
+                </a>
+              </li>
+
             </ul>
+
           </div>
           <button id="agendar-cita-btn" class="btn btn-success">Agendar cita</button>
         </div>
       </nav>
+
 <section>
     <div class="content">
         <div class="paragraph-container">
+          <h1><img src="img/enfermera.png" alt="grupo" style="width: 50px; height: 50px;">Bienvenidos</h1>
             <p class="paragraph">¡Bienvenido al Consultorio Médico!
             
             Ofrecemos atención médica de calidad para toda la familia. Nuestro equipo está comprometido en brindar un cuidado personalizado y compasivo. Ya sea una consulta de rutina o un tratamiento especializado, estamos aquí para ayudarte.
@@ -56,11 +70,23 @@
             No dudes en contactarnos para programar una cita. ¡Gracias por confiar en nosotros como tu proveedor de atención médica!
             </p>
         </div>
-        <div class="image-container">
-            <img src="img/Sala-de-examen.jpg" alt="Descripción de la imagen">
+      </div>
+      <div class="image-container">
+        <!-- Aquí va el nuevo carrusel -->
+        <div id="carruselSalas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item ">
+                    <img src="img/Sala-de-examen.jpg" class="d-block w-100" alt="Sala de examen">
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/consultorio2.webp" class="d-block w-100" alt="Consultorio 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/consultorio3.jpg" class="d-block w-100" alt="Consultorio 3">
+                </div>
+            </div>
         </div>
     </div>
-
 </section>
       
 <script src="script.js"></script>

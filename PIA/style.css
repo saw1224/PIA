@@ -12,25 +12,17 @@
     width: 50%; /* Puedes ajustar este valor según el diseño de tu página */
     float: left; /* Alinea el contenedor a la izquierda */
 }
-.image-container {
-    float: right; /* Alinea el contenedor de la imagen a la derecha */
-    margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
-    margin-right: 50px; /* Ajusta el margen derecho según sea necesario */
-}
 
-.image-container img {
-    width: 450px; /* Establece el ancho deseado para la imagen */
-}
 
 .carousel-item img {
-    height: 150px; /* Altura fija para las imágenes */
-    width: auto; /* Ancho ajustado automáticamente */
+    height: 250px; /* Altura fija para las imágenes */
+    width: 1600px; /* Ancho ajustado automáticamente */
     object-fit: cover; /* Cubrir el área visible con la imagen */
-    margin: 10px auto; /* Añade margen alrededor de las imágenes */
+    margin: 3px auto; /* Añade margen alrededor de las imágenes */
     border-radius: 10px;
 }
 .carousel-item{
-    padding: 20px;
+    padding: 3px;
 }
 
 .container {
@@ -80,5 +72,110 @@
 
 
 
+/* Estilos específicos para el formulario de reserva */
 
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px); /* Reduce la altura para mover el formulario hacia arriba */
+    width: 100%;
+    margin-top: 20px; /* Mueve el formulario un poco hacia arriba */
+}
+
+.reserva-form .reserva {
+    background-color: #fff;
+    padding: 30px; /* Aumenta el relleno para más espacio interior */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ajusta el ancho máximo al 100% */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Añadir espacio entre los elementos del formulario */
+}
+
+
+.reserva-form .reserva div {
+    margin-bottom: 20px; /* Aumentar el margen inferior para más espacio entre elementos */
+    width: calc(50% - 10px); /* Ajustado para hacer espacio para el margen */
+}
+
+.reserva-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    
+}
+
+.reserva-form input[type="text"],
+.reserva-form input[type="datetime-local"],
+.reserva-form input[type="email"],
+.reserva-form select {
+    width: 100%;
+    padding: 15px; /* Aumentar el padding para un diseño más espacioso */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #4CAF50
+}
+
+.reserva-form input[type="text"]:focus,
+.reserva-form input[type="datetime-local"]:focus,
+.reserva-form input[type="email"]:focus,
+.reserva-form select:focus {
+    border-color: #4CAF50;
+}
+
+.reserva-form .full-width {
+    width: 100%;
+}
+
+.reserva-form .button-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.reserva-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserva-form button:hover {
+    background-color: #45a049;
+}
+
+.reserva-form button img {
+    margin-right: 20px;
+}
+
+
+
+
+
+/* Estilos específicos para el nuevo carrusel */
+#carruselSalas .carousel {
+    float: right; /* Alinea el carrusel a la derecha */
+    margin-left: 20px; /* Ajusta el margen izquierdo según sea necesario */
+    margin-right: 50px; /* Ajusta el margen derecho según sea necesario */
+    width: 590px; /* Establece el ancho deseado para el carrusel */
+}
+
+.image-container {
+    float: right;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 590px;
+}
 
