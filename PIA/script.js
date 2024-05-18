@@ -20,3 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Aquí podrías validar los datos del formulario si fuera necesario
+    window.location.href = 'index2.html';
+});
