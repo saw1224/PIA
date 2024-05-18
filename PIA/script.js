@@ -1,12 +1,13 @@
+console.log("hola desde script")
+
+
 // Agregar evento de clic al botón de agendar cita
 document.getElementById("agendar-cita-btn").addEventListener("click", function() {
     // Redirigir al usuario a la página deseada
     window.location.href = "citas.html"; // Cambia "otro_index.html" por la URL de tu otro índice
 });
 
-var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleSlidesOnly'), {
-    interval: 2000 // Intervalo de cambio de diapositivas en milisegundos
-});
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -21,8 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.getElementById('login-form').addEventListener('submit', function(event) {
+
+document.getElementById("login-form").addEventListener("submit", function(event) { 
     event.preventDefault();
+    console.log("dentro del submit")
     // Aquí podrías validar los datos del formulario si fuera necesario
-    window.location.href = 'index2.html';
-});
+    window.location.href = "index2.html";}
+); 
+   
