@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("hola desde script")
+    document.getElementById("reserva").addEventListener("submit", function(event) {
+        event.preventDefault(); // Previene el envío del formulario por defecto
+        window.location.href = "index2.html"; // Redirige a index2.html
+    });
+});
 
 
 document.getElementById("login-form").addEventListener("submit", function(event) { 
