@@ -29,6 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('print-button').addEventListener('click', function () {
+        var printContents = document.querySelector('.container1').innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+        window.location.reload();  // Recargar para restaurar el contenido original
+    });
+});
 
 document.getElementById("login-form").addEventListener("submit", function(event) { 
     event.preventDefault();
@@ -37,7 +48,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     window.location.href = "CRUDPasientes.html";}
 ); 
 
-   
+
 
 // $(document).ready(function() {
 //     $.ajax({
@@ -67,3 +78,5 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 //         }
 //     });
 // });
+
+
