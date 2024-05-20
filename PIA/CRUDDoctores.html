@@ -50,6 +50,100 @@
         </div>
       </nav>
 
+      <div class="container1 mt-5">
+        <h1 class="mb-4">CRUD Doctores</h1>
+    
+        <!-- Botón para abrir el modal de creación -->
+        <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#createModal2">Añadir Nuevo</button>
+    
+        <!-- Tabla de datos -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>IdTrabajador</th>
+                    <th>Nombre</th>
+                    <th>ApellidoMaterno</th>
+                    <th>ApellidoPaterno</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Descripcion</th>
+                    <th>Acciones</th>
+
+                </tr>
+            </thead>
+            <tbody id="table-body2">
+                <!-- Filas de datos serán insertadas aquí mediante AJAX -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Modal de creación -->
+    <div class="modal fade" id="createModal2" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalLabel2">Añadir Nuevo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createForm2">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">ApellidoMaterno</label>
+                            <input type="email" class="form-control" id="apellidomaterno2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">ApellidoPaterno</label>
+                            <input type="email" class="form-control" id="apellidoPaterno2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Usuario</label>
+                            <input type="email" class="form-control" id="usuario2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Contraseña</label>
+                            <input type="email" class="form-control" id="Password2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Descripcion</label>
+                            <input type="email" class="form-control" id="Descripcion2" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de edición -->
+    <div class="modal fade" id="editModal2" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel2">Editar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm2">
+                        <input type="hidden" id="edit-id2">
+                        <div class="mb-3">
+                            <label for="edit-name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="edit-name2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="edit-email2" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="./script.js"></script>

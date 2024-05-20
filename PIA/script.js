@@ -34,35 +34,36 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     event.preventDefault();
     console.log("dentro del submit")
     // Aquí podrías validar los datos del formulario si fuera necesario
-    window.location.href = "index2.html";}
+    window.location.href = "CRUDPasientes.html";}
 ); 
+
    
 
-$(document).ready(function() {
-    $.ajax({
-        url: 'http://localhost:8080/Departamento', // URL de tu API
-        method: 'GET', // Método HTTP para la petición
-        dataType: 'json', // Tipo de datos que se espera recibir
-        success: function(data) { // Función que se ejecuta si la petición es exitosa
-            $('#departments-container').empty(); // Limpiar el contenedor
+// $(document).ready(function() {
+//     $.ajax({
+//         url: 'http://localhost:8080/Departamento', // URL de tu API
+//         method: 'GET', // Método HTTP para la petición
+//         dataType: 'json', // Tipo de datos que se espera recibir
+//         success: function(data) { // Función que se ejecuta si la petición es exitosa
+//             $('#departments-container').empty(); // Limpiar el contenedor
 
-            data.forEach(function(departamento) { // Iterar sobre los datos recibidos
-                let departmentCard = `
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="${departamento.imagen}" class="card-img-top" alt="${departamento.nombreDepartamento}">
-                            <div class="card-body">
-                                <h5 class="card-title">${departamento.nombreDepartamento}</h5>
-                                <p class="card-text">${departamento.descripcionDepartamento}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                $('#departments-container').append(departmentCard); // Añadir las tarjetas al contenedor
-            });
-        },
-        error: function(error) { // Función que se ejecuta si hay un error en la petición
-            console.error("Error al realizar la petición:", error);
-        }
-    });
-});
+//             data.forEach(function(departamento) { // Iterar sobre los datos recibidos
+//                 let departmentCard = `
+//                     <div class="col-md-4">
+//                         <div class="card mb-4">
+//                             <img src="${departamento.imagen}" class="card-img-top" alt="${departamento.nombreDepartamento}">
+//                             <div class="card-body">
+//                                 <h5 class="card-title">${departamento.nombreDepartamento}</h5>
+//                                 <p class="card-text">${departamento.descripcionDepartamento}</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 `;
+//                 $('#departments-container').append(departmentCard); // Añadir las tarjetas al contenedor
+//             });
+//         },
+//         error: function(error) { // Función que se ejecuta si hay un error en la petición
+//             console.error("Error al realizar la petición:", error);
+//         }
+//     });
+// });
