@@ -41,7 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
+document.getElementById("login-form").addEventListener("submit", function(event) { 
+    event.preventDefault();
+    console.log("dentro del submit")
+    // Aquí podrías validar los datos del formulario si fuera necesario
+    window.location.href = "CRUDPacientes.html";}
+); 
 
 
 // $(document).ready(function() {
@@ -75,12 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.getElementById("login-form").addEventListener("submit", function(event) { 
-    event.preventDefault();
-    console.log("dentro del submit")
-    // Aquí podrías validar los datos del formulario si fuera necesario
-    window.location.href = "CRUDPasientes.html";}
-); 
 
 
 
