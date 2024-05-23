@@ -201,3 +201,16 @@ h7 {
     line-height: 1.6;
     margin-top: 20px;
 }
+
+.card-img-small {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+#departments-container {
+    padding-left: 20px; /* Ajusta el valor según tus necesidades */
+    padding-right: 15px; /* Ajusta el valor según tus necesidades */
+}
+#trabajadores-container {
+    padding-left: 20px; /* Ajusta el valor según tus necesidades */
+    padding-right: 15px; /* Ajusta el valor según tus necesidades */
+}
