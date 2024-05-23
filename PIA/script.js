@@ -40,16 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.reload();  // Recargar para restaurar el contenido original
     });
 });
-
-document.getElementById("login-form").addEventListener("submit", function(event) { 
-    event.preventDefault();
-    console.log("dentro del submit")
-    // Aquí podrías validar los datos del formulario si fuera necesario
-    window.location.href = "CRUDPacientes.html";}
-); 
-
-
 // $(document).ready(function() {
+//     console.log("hola desde jquery");
 //     $.ajax({
 //         url: 'http://localhost:8080/Departamento', // URL de tu API
 //         method: 'GET', // Método HTTP para la petición
@@ -61,10 +53,10 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 //                 let departmentCard = `
 //                     <div class="col-md-4">
 //                         <div class="card mb-4">
-//                             <img src="${departamento.imagen}" class="card-img-top" alt="${departamento.nombreDepartamento}">
+//                             <img src="${departamento.imagen}" class="card-img-top" alt="${departamento.nombre}">
 //                             <div class="card-body">
-//                                 <h5 class="card-title">${departamento.nombreDepartamento}</h5>
-//                                 <p class="card-text">${departamento.descripcionDepartamento}</p>
+//                                 <h5 class="card-title">${departamento.nombre}</h5>
+//                                 <p class="card-text">${departamento.descripcion}</p>
 //                             </div>
 //                         </div>
 //                     </div>
@@ -77,6 +69,15 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 //         }
 //     });
 // });
+
+document.getElementById("login-form").addEventListener("submit", function(event) { 
+    event.preventDefault();
+    console.log("dentro del submit")
+    // Aquí podrías validar los datos del formulario si fuera necesario
+    window.location.href = "CRUDPacientes.html";}
+); 
+
+
 
 
 
