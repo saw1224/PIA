@@ -68,7 +68,9 @@
                     <th>Correo</th>
                     <th>Telefono</th>
                     <th>Sintomas</th>
+                    <th>Id Consultorio</th>
                      <th>Acciones</th>
+
                 </tr>
             </thead>
             <tbody id="table-body3">
@@ -93,28 +95,32 @@
                             <input type="text" class="form-control" id="name3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">ApellidoMaterno</label>
-                            <input type="email" class="form-control" id="apellidomaterno3" required>
+                            <label for="name" class="form-label">ApellidoMaterno</label>
+                            <input type="text" class="form-control" id="apellidomaterno3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">ApellidoPaterno</label>
-                            <input type="email" class="form-control" id="apellidoPaterno3" required>
+                            <label for="name" class="form-label">ApellidoPaterno</label>
+                            <input type="text" class="form-control" id="apellidoPaterno3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">FechaYHoraReservacion</label>
-                            <input type="email" class="form-control" id="fechaYHorareservacion3" required>
+                            <label for="name" class="form-label">FechaYHoraReservacion</label>
+                            <input type="text" class="form-control" id="fechaYHorareservacion3" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo</label>
                             <input type="email" class="form-control" id="correo3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Telefono</label>
-                            <input type="email" class="form-control" id="telefono3" required>
+                            <label for="name" class="form-label">Telefono</label>
+                            <input type="text" class="form-control" id="telefono3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Sintomas</label>
-                            <input type="email" class="form-control" id="sintomas3" required>
+                            <label for="name" class="form-label">Sintomas</label>
+                            <input type="text" class="form-control" id="sintomas3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Id Consultorio</label>
+                            <input type="text" class="form-control" id="idConsultorio3" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
@@ -139,31 +145,35 @@
                             <input type="text" class="form-control" id="edit-Nombre3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">apellidomaterno</label>
+                            <label for="edit-name" class="form-label">ApellidoMaterno</label>
                             <input type="text" class="form-control" id="edit-apellidomaterno3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">apellidoPaterno</label>
+                            <label for="edit-name" class="form-label">ApellidoPaterno</label>
                             <input type="text" class="form-control" id="edit-apellidoPaterno3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">fechaYHorareservacion3</label>
+                            <label for="edit-name" class="form-label">FechaYHoraReservacion</label>
                             <input type="text" class="form-control" id="edit-fechaYHorareservacion3" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">correo</label>
+                            <label for="edit-name" class="form-label">Correo</label>
                             <input type="text" class="form-control" id="edit-correo3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">telefono</label>
+                            <label for="edit-name" class="form-label">Telefono</label>
                             <input type="text" class="form-control" id="edit-telefono3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">sintomas</label>
+                            <label for="edit-name" class="form-label">Sintomas</label>
                             <input type="text" class="form-control" id="edit-sintomas3" required>
                         </div>
-
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Id Consultorio</label>
+                            <input type="text" class="form-control" id="idConsultorio3" required>
+                        </div>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </form>
                 </div>
@@ -175,7 +185,8 @@
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./script.js"></script>
+<script src="Pascientes/CRUDPacientes.js"></script>
+<script src="script.js"></script>
 
 </body>
 
