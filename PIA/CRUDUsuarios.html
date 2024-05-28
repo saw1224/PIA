@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="img/hospital.png" alt="Logo" width="65" height="65" class="d-inline-block align-top">
-        </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="index.html">Cerrar Sesion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="CRUDPacientes.html">CRUD pacientes
-                    <img src="img/medico.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="CRUDDoctores.html">CRUD Doctores
-                    <img src="img/doctor.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="CRUDDepartamentos.html">CRUD Departamentos
-                    <img src="img/departamento.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">CRUD usuarios
-                    <img src="img/intimidad.png" alt="Descripción de la imagen" style="width: 30px; height: 30px; margin-left: 5px;"> 
-                </a>
-              </li>
+            <a class="navbar-brand" href="#">
+                <img src="img/hospital.png" alt="Logo" width="65" height="65" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Cerrar Sesion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CRUDPacientes.html">CRUD pacientes
+                            <img src="img/medico.png" alt="Descripción de la imagen"
+                                style="width: 30px; height: 30px; margin-left: 5px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CRUDDoctores.html">CRUD Doctores
+                            <img src="img/doctor.png" alt="Descripción de la imagen"
+                                style="width: 30px; height: 30px; margin-left: 5px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CRUDDepartamentos.html">CRUD Departamentos
+                            <img src="img/departamento.png" alt="Descripción de la imagen"
+                                style="width: 30px; height: 30px; margin-left: 5px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CRUD usuarios
+                            <img src="img/intimidad.png" alt="Descripción de la imagen"
+                                style="width: 30px; height: 30px; margin-left: 5px;">
+                        </a>
+                    </li>
+                   
 
-            </ul>
+                </ul>
 
-          </div>
-          <button id="agendar-cita-btn" class="btn btn-success">Agendar cita</button>
+            </div>
+            <button id="agendar-cita-btn" class="btn btn-success">Agendar cita</button>
         </div>
-      </nav>
+    </nav>
 
 
-      <div class="container1 mt-5">
+    <div class="container1 mt-5">
         <h1 class="mb-4">CRUD Usuarios</h1>
-    
-        <!-- Botón para abrir el modal de creación -->
         <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#createModal4">Añadir Nuevo</button>
-    
-        <!-- Tabla de datos -->
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -68,18 +73,16 @@
                     <th>Usuario</th>
                     <th>Contraseña</th>
                     <th>Descripcion</th>
-                    <th>Rol</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="table-body4">
-                <!-- Filas de datos serán insertadas aquí mediante AJAX -->
             </tbody>
         </table>
     </div>
-    
+
     <!-- Modal de creación -->
-    <div class="modal fade" id="createModal4" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal fade" id="createModal4" tabindex="-1" aria-labelledby="createModalLabel4" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -89,42 +92,39 @@
                 <div class="modal-body">
                     <form id="createForm4">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
+                            <label for="name4" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="name4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">ApellidoMaterno</label>
-                            <input type="email" class="form-control" id="apellidomaterno4" required>
+                            <label for="apellidomaterno4" class="form-label">Apellido Materno</label>
+                            <input type="text" class="form-control" id="apellidomaterno4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">ApellidoPaterno</label>
-                            <input type="email" class="form-control" id="apellidoPaterno4" required>
+                            <label for="apellidoPaterno4" class="form-label">Apellido Paterno</label>
+                            <input type="text" class="form-control" id="apellidoPaterno4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Usuario</label>
-                            <input type="email" class="form-control" id="usuario4" required>
+                            <label for="usuario4" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuario4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Contraseña</label>
-                            <input type="email" class="form-control" id="Password4" required>
+                            <label for="Password4" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="Password4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Descripcion</label>
-                            <input type="email" class="form-control" id="Descripcion4" required>
+                            <label for="Descripcion4" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="Descripcion4" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Rol</label>
-                            <input type="email" class="form-control" id="rol4" required>
-                        </div>
+                    
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Modal de edición -->
-    <div class="modal fade" id="editModal4" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editModal4" tabindex="-1" aria-labelledby="editModalLabel4" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -135,13 +135,30 @@
                     <form id="editForm4">
                         <input type="hidden" id="edit-id4">
                         <div class="mb-3">
-                            <label for="edit-name" class="form-label">Nombre</label>
+                            <label for="edit-name4" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="edit-name4" required>
                         </div>
                         <div class="mb-3">
-                            <label for="edit-email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="edit-email4" required>
+                            <label for="edit-apellidomaterno4" class="form-label">Apellido Materno</label>
+                            <input type="text" class="form-control" id="edit-apellidomaterno4" required>
                         </div>
+                        <div class="mb-3">
+                            <label for="edit-apellidoPaterno4" class="form-label">Apellido Paterno</label>
+                            <input type="text" class="form-control" id="edit-apellidoPaterno4" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-usuario4" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="edit-usuario4" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-Password4" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="edit-Password4" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-Descripcion4" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="edit-Descripcion4" required>
+                        </div>
+                
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </form>
                 </div>
@@ -150,10 +167,13 @@
     </div>
 
 
-      
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Usuarios/CRUDUsuarios.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -24,7 +24,6 @@ $(document).ready(function () {
                             <td>${cita.telefono}</td>
                             <td>${cita.sintomas}</td>
                             <td>${cita.consultorio.id}</td>
-
                             <td>
                                 <button class="btn btn-primary btn-edit" data-id="${cita.id}" data-bs-toggle="modal" data-bs-target="#editModal3">Editar</button>
                                 <button class="btn btn-danger btn-delete" data-id="${cita.id}">Eliminar</button>
@@ -42,11 +41,14 @@ $(document).ready(function () {
 
                 $('.btn-delete').click(function () {
                     let id = $(this).data('id');
-                    deleteCita(id);
+                    if (confirm('¿Estás seguro de que deseas eliminar esta cita?')) {
+                        deleteCita(id);
+                    }
                 });
             },
             error: function (error) {
                 console.error("Error al realizar la petición:", error);
+                alert("Error al cargar las citas. Por favor, inténtelo de nuevo más tarde.");
             }
         });
     }
@@ -69,6 +71,7 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.error("Error al cargar datos de la cita:", error);
+                alert("Error al cargar los datos de la cita. Por favor, inténtelo de nuevo más tarde.");
             }
         });
     }
@@ -83,20 +86,58 @@ $(document).ready(function () {
             fechaReservacion: $('#fechaYHorareservacion3').val(),
             correo: $('#correo3').val(),
             telefono: $('#telefono3').val(),
-            sintomas: $('#sintomas3').val()
+            sintomas: $('#sintomas3').val(),
+            consultorio: {
+                id: $('#idConsultorio3').val()
+            }
         };
 
         $.ajax({
-            url: 'http://localhost:8080/Cita',
+            url: `http://localhost:8080/Cita/${newCita.consultorio.id}/Cita`,
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(newCita),
             success: function () {
                 $('#createModal3').modal('hide');
+                $('#createForm3')[0].reset(); // Limpiar el formulario
                 loadCitas();
             },
             error: function (error) {
                 console.error("Error al crear la cita:", error);
+                alert("Error al crear la cita. Por favor, inténtelo de nuevo más tarde.");
+            }
+        });
+    });
+
+    // Función para actualizar una cita existente
+    $('#editForm3').submit(function (event) {
+        event.preventDefault();
+        let updatedCita = {
+            id: $('#edit-id3').val(),
+            nombre: $('#edit-Nombre3').val(),
+            apellidoPaterno: $('#edit-apellidoPaterno3').val(),
+            apellidoMaterno: $('#edit-apellidoMaterno3').val(),
+            fechaReservacion: $('#edit-fechaYHorareservacion3').val(),
+            correo: $('#edit-correo3').val(),
+            telefono: $('#edit-telefono3').val(),
+            sintomas: $('#edit-sintomas3').val(),
+            consultorio: {
+                id: $('#idConsultorio3').val()
+            }
+        };
+
+        $.ajax({
+            url: `http://localhost:8080/Cita/${updatedCita.id}`,
+            method: 'PUT',
+            contentType: 'application/json',
+            data: JSON.stringify(updatedCita),
+            success: function () {
+                $('#editModal3').modal('hide');
+                loadCitas();
+            },
+            error: function (error) {
+                console.error("Error al actualizar la cita:", error);
+                alert("Error al actualizar la cita. Por favor, inténtelo de nuevo más tarde.");
             }
         });
     });
@@ -112,6 +153,7 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.error("Error al eliminar la cita:", error);
+                alert("Error al eliminar la cita. Por favor, inténtelo de nuevo más tarde.");
             }
         });
     }
